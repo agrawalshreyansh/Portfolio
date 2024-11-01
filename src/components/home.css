@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+.main {
+    width: inherit;
+}
+
+.profileimg {
+    display: flex;
+    justify-content: center;
+}
+
+
+.profileimg img {
+    height: 230px;
+    width: 230px;
+    margin: 90px 10px 20px 10px;
+    border-radius: 50%;
+    transition: transform .6s;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: darkslategray; 
+    cursor: pointer;
+   
+}
+
+.myskill {
+    transition: transform .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details h2:hover, .myskill:hover {
+    transform: scale(1.1);
+    color: #39e0e0;
+}
+
+.details h2 {
+    font-family: Shadows Into Light;
+    font-size: 60px;
+    transition: transform .2s;
+}
+
+.details h3 {
+    font-family: vollkorn;
+    margin: -2px;
+    font-size: 25px;
+    
+}
+
+.profileimg img:hover {
+    transform: scale(1.4);
+}

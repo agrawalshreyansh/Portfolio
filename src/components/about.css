@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+.aboutme {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 10px;
+    color: #386161;
+}
+
+.aboutme h1 {
+    font-size: 50px;
+    transition: transform 0.4s;
+}
+
+
+.aboutme h3 {
+    font-family: vollkorn;
+    font-weight: 200;
+    text-align: justify;
+    transition: transform 0.4s;
+}
+
+.aboutme h1:hover, .aboutme h3:hover {
+    transform: scale(1.1);
+    color: #39e0e0;
+    cursor: pointer;
+}

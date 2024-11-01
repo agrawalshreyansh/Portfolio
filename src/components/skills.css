@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+.sk-container-1, .sk-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 40px 25px 0 25px;
+    width: 55vw;
+}
+
+
+.sk-container-1 div, .sk-container-2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 27vw;
+    font-size: 18px;
+    font-family: vollkorn;
+    margin-top: 70px;
+}
+
+
+.sk-container-2 div {
+    margin-top: 0;
+    padding-top: 40px;
+}
+
+.sk-container-2 {
+    margin-top: 0;
+    
+}
+
+
+
+.sk-container-1 h3, .sk-container-2 h3 {
+    padding:  0 35px;
+}
+
+.lang {
+    border-right: 4px solid whitesmoke;
+   
+    border-image: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)) 1; /* Border gradient colors */
+    border-image-slice: 1;
+    animation: animate-border 2s linear infinite;
+}
+
+
+
+
+/* .frames {
+    border-left: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    border-image: linear-gradient(90deg, #FF6B35, #A8E6CF, #FF6B35) 1;  Border gradient colors 
+    border-image-slice: 1;
+    animation: animate-border 2s linear infinite;
+
+} */
+/* .data {
+    border-right: 2px solid whitesmoke;
+    border-top: 2px solid whitesmoke;
+    border-image: linear-gradient(90deg, #FF6B35, #A8E6CF, #FF6B35) 1; /* Border gradient colors 
+    border-image-slice: 1;
+    animation: animate-border 2s linear infinite;
+
+} */
+.tech {
+    border-left: 4px solid whitesmoke;
+    
+    border-image: linear-gradient(90deg,rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)) 1; /* Border gradient colors */
+    border-image-slice: 1;
+    animation: animate-border 2s linear infinite;
+
+}
+
+.f-text {
+    margin-bottom: 0;
+}
+
+.lib-text {
+    margin-top: 0;
+}
+
+@keyframes animate-border {
+    0% {
+      border-image-source: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8));
+    }
+    100% {
+      border-image-source: linear-gradient(90deg,  rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8));
+    }
+}
+
+.line {
+    width: 50vw;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)); /* Colors cycling along the line */
+    background-size: 200% 100%;
+    animation: animate-line 2s linear infinite;
+  }
+  
+  @keyframes animate-line {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
