@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+.edmain {
+    display: flex;
+    font-family: vollkorn;
+}
+
+.e-divide {
+    height: 80vh;
+    border: 3px solid yellow;
+    margin-top: 2vw;
+}
+
+
+.e-container-1 {
+    margin-right: 30px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.e-container-2 {
+    margin-left: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sdegree {
+    margin-top: 170px;
+}
+
+.bdegree {
+    margin-top: 20px;
+}
+
+.hsdegree img {
+    background-color: black;
+    transform: translate(50px, -125px);
+    height: 35px;
+    width: 35px;
+    border-radius: 20%;
+}
+
+.bdegree img, .sdegree img {
+    background-color: black;
+    transform: translate(-50px, -120px);
+    height: 35px;
+    width: 35px;
+    border-radius: 20%;
+
+}
+
+.bdegree h1, .hsdegree h1, .sdegree h1,.bdegree h3, .hsdegree h3, .sdegree h3,.bdegree h4, .hsdegree h4, .sdegree h4 {
+    transition: transform 0.3s
+}
+
+.bdegree h1:hover, .hsdegree h1:hover, .sdegree h1:hover,.bdegree h3:hover, .hsdegree h3:hover, .sdegree h3:hover,.bdegree h4:hover, .hsdegree h4:hover, .sdegree h4:hover {
+    transform: scale(1.15);
+    color: aqua;
+    cursor: pointer;
+}
+
+

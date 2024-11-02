@@ -9,6 +9,7 @@
     justify-content: center;
     margin: 40px 25px 0 25px;
     width: 55vw;
+    color: #386161;
 }
 
 
@@ -20,6 +21,17 @@
     font-size: 18px;
     font-family: vollkorn;
     margin-top: 70px;
+   
+}
+
+.sk-container-1 h3:hover, .sk-container-2 h3:hover, .sk-container-2 h2:hover, .sk-container-1 h2:hover {
+    transition: transform 0.3s;
+}
+
+.sk-container-1 h3:hover, .sk-container-2 h3:hover, .sk-container-2 h2:hover, .sk-container-1 h2:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: aqua;
 }
 
 
@@ -47,28 +59,12 @@
     animation: animate-border 2s linear infinite;
 }
 
+.lang h3 {
+    margin-left: 3vw;
+}
 
-
-
-/* .frames {
-    border-left: 2px solid whitesmoke;
-    border-bottom: 2px solid whitesmoke;
-    border-image: linear-gradient(90deg, #FF6B35, #A8E6CF, #FF6B35) 1;  Border gradient colors 
-    border-image-slice: 1;
-    animation: animate-border 2s linear infinite;
-
-} */
-/* .data {
-    border-right: 2px solid whitesmoke;
-    border-top: 2px solid whitesmoke;
-    border-image: linear-gradient(90deg, #FF6B35, #A8E6CF, #FF6B35) 1; /* Border gradient colors 
-    border-image-slice: 1;
-    animation: animate-border 2s linear infinite;
-
-} */
 .tech {
     border-left: 4px solid whitesmoke;
-    
     border-image: linear-gradient(90deg,rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)) 1; /* Border gradient colors */
     border-image-slice: 1;
     animation: animate-border 2s linear infinite;
@@ -93,11 +89,12 @@
 }
 
 .line {
-    width: 50vw;
+    width: 52vw;
     height: 4px;
     background: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)); /* Colors cycling along the line */
     background-size: 200% 100%;
     animation: animate-line 2s linear infinite;
+    margin-left: 3vw;
   }
   
   @keyframes animate-line {

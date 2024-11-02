@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+.social-links-1,.social-links-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social-links-1 img, .social-links-2 img {
+    margin: 30px 50px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-links-1 img:hover, .social-links-2 img:hover {
+    transform: scale(1.4);
+}
+.social-links-1 {
+    margin-top: 60px;
+}
+
+.inpu-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.inpu-texts textarea {
+    height: 13vw;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 15px ;
+    padding: 8px 12px;
+    font-family: vollkorn;
+}
+
+.inpu-texts input:nth-child(1) {
+    height: 25px;
+    padding: 7px 10px;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: vollkorn;
+}
+
+.contact-form {
+    margin-top: 30px;
+    width: 32vw;
+    margin-left: 2vw;
+}
+
+.contact-form h1 {
+    margin: 15px 0px;
+}
+
+.contact-form button {
+    margin: 15px 0;
+    height: 35px;
+    width: inherit;
+    cursor: pointer;
+    background-color: #416161;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contact-form img {
+    height: 25px;
+    margin-left: 15px;
+}
