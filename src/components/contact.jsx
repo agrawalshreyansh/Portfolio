@@ -41,7 +41,7 @@ function Contact() {
                 alert("Error sending email: " + errorData.error);
             } else {
                 const data = await res.json();
-                alert("Success: " + data.message);
+                alert("Your response has been recorded!");
             }
         } catch (error) {
             console.error("Error sending email:", error);
