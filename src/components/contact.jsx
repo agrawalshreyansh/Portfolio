@@ -8,8 +8,47 @@ import codeforce from '../assets/codeforces.png'
 import resume from '../assets/resume.png'
 import './contact.css' 
 import send from '../assets/paper.png'
+import React, { useState } from 'react';
 
 function Contact() {
+    const [userEmail, setUserEmail] = useState('');
+    const [response, setResponse] = useState('');
+    const [msg,setMsg] = useState('');
+
+    // Handle form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Send email data to backend
+        try {
+            const res = await fetch("https://shragepy.pythonanywhere.com/sendmail/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    my_email: 'contactcode.ag@gmail.com',
+                    my_password: 'jjeb gqfz sdrp osxo',
+                    user_email: userEmail,
+                    msg : msg
+                }),
+            });
+
+            if (!res.ok) {
+                // Handle server errors
+                const errorData = await res.json();
+                console.error("Error:", errorData);
+                alert("Error sending email: " + errorData.error);
+            } else {
+                const data = await res.json();
+                alert("Success: " + data.message);
+            }
+        } catch (error) {
+            console.error("Error sending email:", error);
+            alert("Error sending email: " + error.message);
+        }
+    };
+
     return(
         <>
             <div className='social-links-1'>
@@ -27,14 +66,19 @@ function Contact() {
 
             <div className='contact-form'>
                 <h1>Have a message for me ?</h1>
+                <form onSubmit={handleSubmit}>
+
                 <div className='inpu-texts'>
-                    <input id='email' type='email' placeholder='Your email'/>
-                    <textarea id='message' type='text' placeholder='Your message'/>
+                    <input id='email' type='email'   value={userEmail}
+                        onChange={(e) => setUserEmail(e.target.value)}
+                        required placeholder='Your email'/>
+                    <textarea id='message' type='text' placeholder='Your message' value={msg} onChange={(e) => setMsg(e.target.value)}/>
                 </div>
-                <button>Send<img src={send}/></button>
+                <button type='submit'>Send<img src={send}/></button>
+                    </form>
             </div>
         </>
     )
 }
 
-export default Contact 
+export default Contact ;
