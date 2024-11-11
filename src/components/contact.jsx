@@ -8,18 +8,22 @@ import codeforce from '../assets/codeforces.png'
 import resume from '../assets/resume.png'
 import './contact.css' 
 import send from '../assets/paper.png'
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 function Contact() {
     const [userEmail, setUserEmail] = useState('');
-    const [response, setResponse] = useState('');
+    const [loading, setLoading] = useState(false);
     const [msg,setMsg] = useState('');
+    const [form,setForm] = useState(true) ;
+    const [reply,setReply] = useState(false) ;
 
     // Handle form submission
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setLoading(true);
         // Send email data to backend
+        setForm(false);
         try {
             const res = await fetch("https://shragepy.pythonanywhere.com/sendmail/", {
                 method: "POST",
@@ -41,11 +45,15 @@ function Contact() {
                 alert("Error sending email: " + errorData.error);
             } else {
                 const data = await res.json();
-                alert("Your response has been recorded!");
+                
             }
         } catch (error) {
             console.error("Error sending email:", error);
             alert("Error sending email: " + error.message);
+        }
+        finally {
+            setLoading(false); // Hide spinner after request completes
+            setReply(true);
         }
     };
 
@@ -64,10 +72,9 @@ function Contact() {
                 <a href='https://drive.google.com/file/d/1CjFu5W0Y6YeyIO6AiTDjsVBAkZY_lnC7/view?usp=drive_link' target="_blank" rel="noopener noreferrer"><img src={resume} alt="Resume"  /></a>
             </div>
 
-            <div className='contact-form'>
-                <h1>Have a message for me ?</h1>
-                <form onSubmit={handleSubmit}>
-
+            { form &&   <div className='contact-form'>
+              <h1>Have a message for me ?</h1>
+               <form onSubmit={handleSubmit}>
                 <div className='inpu-texts'>
                     <input id='email' type='email'   value={userEmail}
                         onChange={(e) => setUserEmail(e.target.value)}
@@ -75,7 +82,12 @@ function Contact() {
                     <textarea id='message' type='text' placeholder='Your message' value={msg} onChange={(e) => setMsg(e.target.value)}/>
                 </div>
                 <button type='submit'>Send<img src={send}/></button>
-                    </form>
+                    </form> 
+                    
+            </div> }
+            <div className='replydiv'>
+            {loading && <div className="spinner"></div>}
+            {reply && <div className='form-reply'>Your message has been sent successfully !<br/>Kindly check you mail for reply !</div>}
             </div>
         </>
     )
