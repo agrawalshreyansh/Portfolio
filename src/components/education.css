@@ -68,3 +68,14 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+    .bdegree {
+        font-size: 3vw;
+        margin-top: 40px;
+    }    
+
+    .e-divide {
+        margin-top: 8vw;
+    }
+
+}

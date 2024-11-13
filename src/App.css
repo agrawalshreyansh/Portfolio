@@ -57,3 +57,37 @@
     transform-origin: right;
 }
 
+.menu-icon {
+    display: none;
+}
+
+.tabicons {
+    display: none;
+   
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        margin-right: 0;
+        padding: 0px 10px;
+    }
+    
+    .nav-elements {
+        padding: 5px 5px ;
+    }
+
+    .nav-elements li {
+       padding: 10px 15px;
+    } 
+
+    .tabnames {
+        display: none;
+    }
+
+    .tabicons {
+        display: block;
+        height: 30px;
+    }
+
+
+}

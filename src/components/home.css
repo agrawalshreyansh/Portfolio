@@ -56,3 +56,17 @@
 .profileimg img:hover {
     transform: scale(1.4);
 }
+
+@media only screen and (max-width: 600px) {
+    .details h2 {
+        font-size: 12vw;
+    }
+    
+    .profileimg {
+        margin-top: 40px;
+    }
+
+    h2 {
+        margin: 70px 0 40px 0;
+    }
+}

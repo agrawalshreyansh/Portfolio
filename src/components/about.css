@@ -26,3 +26,13 @@
     color: #39e0e0;
     cursor: pointer;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .aboutme {
+        width: 85vw;
+        margin-top: 0;
+        
+    }
+}

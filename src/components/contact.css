@@ -104,3 +104,19 @@
     font-size: larger;
     margin-top: 20vh;
   }
+
+
+  @media only screen and (max-width: 600px) {
+  .social-links-1 img, .social-links-2 img {
+    margin: 30px 35px;
+}
+
+    .contact-form {
+        width: 90vw;
+        margin-top: 70px;
+    }
+
+    .inpu-texts textarea {
+        height: 40vw;
+    }
+  }

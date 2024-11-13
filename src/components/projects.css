@@ -88,3 +88,24 @@
     border: 1px solid #999934;
     margin-top: 10vw;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .proj-links {
+        margin-top: 0;
+    }
+
+    .proj-img img {
+        margin-left: 0
+    }
+
+    .proj-img img:hover {
+        transform: none;
+    }
+
+    .proj h1:hover {
+        transform: none;
+    }
+
+
+}
