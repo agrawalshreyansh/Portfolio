@@ -17,7 +17,7 @@ const NameSlider = () => {
   ), []);
 
   return (
-    <div className="bg-[#344e41] text-white">
+    <div className="bg-[#344e41] text-[#dad7cd]">
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: curtainLifted ? "-100%" : "0%" }}

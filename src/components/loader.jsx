@@ -28,7 +28,7 @@ const words = [
   
     return (
       <motion.div
-        className="absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-[#004346] text-white text-9xl font-bold"
+        className="absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-[#344e41] text-[#dad7cd] text-9xl font-bold"
         initial={{ y: 0 }}
         animate={slideUp ? { y: "-100%" } : {}}
         transition={{ duration: 1, ease: "easeInOut" }}
