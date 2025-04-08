@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-[#dad7cd] group/design-root overflow-hidden text-[#1d2923]" style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}>
       <div className="layout-container flex h-full grow flex-col">
-        <div className="px-24 flex flex-1 justify-center py-24">
+        <div className="px-24 flex flex-1 justify-center py-12">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
 
             <div className="flex flex-wrap justify-between gap-3 p-4">
