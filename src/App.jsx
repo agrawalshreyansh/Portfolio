@@ -1,6 +1,6 @@
 import Loader from "./components/loader";
 import { useState } from "react";
-import './app.css'
+import './App.css'
 import Layout from "./components/layout";
 
 
