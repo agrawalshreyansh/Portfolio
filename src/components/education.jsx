@@ -29,7 +29,7 @@ const Education = () => {
     };
   }, []);
     return ( <>
-    <div className='h-screen flex items-center flex-col justify-center bg-[#324031]' ref={timelineRef}>
+    <div className='h-screen flex items-center flex-col justify-center bg-[#324031]' ref={timelineRef} id='education'>
         <VerticalTimeline animate={isVisible} >
   <VerticalTimelineElement
     className="vertical-timeline-element--work"

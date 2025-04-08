@@ -128,7 +128,7 @@ export default function ProjectsShowcase() {
   const opacity4 = useTransform(scrollYProgress, [0.75, 1], [0, 1]);
 
   return (
-    <div ref={containerRef} className="h-[400vh] bg-[#a3b18a]">
+    <div ref={containerRef} className="h-[400vh] bg-[#a3b18a]" id='projects'>
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <motion.div className="w-full h-screen flex flex-col items-center justify-center">
           <motion.div className="absolute w-full h-screen flex items-center justify-center rounded-xl shadow-lg" style={{  opacity: opacity1 }} >
