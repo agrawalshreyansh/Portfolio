@@ -1,16 +1,11 @@
-import Loader from "./components/loader";
-import { useState } from "react";
 import './App.css'
-import Layout from "./components/layout";
 
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
 
   return (
     <div className="relative h-screen">
-      <Layout />
-      {loading && <Loader onFinish={() => setLoading(false)} />}
+      
     </div>
   );
 };
