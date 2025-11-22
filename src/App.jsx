@@ -1,28 +1,32 @@
 import './App.css'
+import Card from './components/Card';
+import { projects, experiences, techStack } from './constants';
+import { House, Briefcase, Wrench, Contact } from 'lucide-react';
+
 
 const App = () => {
 
   return (
     <div className="p-5">
-      <nav className="top-5 left-5 right-5 flex items-center justify-center  z-10">
-        <div className="flex gap-4 w-min bg-bg-secondary  shadow-lg px-6 h-12 rounded-lg">
-          <a href="#home" className="text-text-primary hover:text-text-secondary flex items-center space-x-1">
-            <span>Home</span>
+      <nav className="flex items-center justify-center mt-2">
+        <div className="flex items-center gap-12 w-min bg-bg-secondary  shadow-lg px-6 h-12 rounded-2xl">
+          <a href="#home" className="text-text-primary hover:text-text-secondary">
+            <House size={20} />
           </a>
-          <a href="#about" className="text-text-primary hover:text-text-secondary flex items-center space-x-1">
-            <span>About</span>
+          <a href="#about" className="text-text-primary hover:text-text-secondary">
+            <Briefcase size={20} />
           </a>
-          <a href="#projects" className="text-text-primary hover:text-text-secondary flex items-center space-x-1">
-            <span>Projects</span>
+          <a href="#projects" className="text-text-primary hover:text-text-secondary">
+            <Wrench size={20} />
           </a>
-          <a href="#contact" className="text-text-primary hover:text-text-secondary flex items-center space-x-1">
-            <span>Contact</span>
+          <a href="#contact" className="text-text-primary hover:text-text-secondary">
+            <Contact size={20} />
           </a>
         </div>
       </nav>
-      <div className='flex gap-8 mt-20 mx-36'>
+      <div className='flex gap-16 mt-20 mx-36'>
         <div className="flex-1 sticky top-[50px] flex flex-col items-center h-min">
-          <div className='flex flex-col mx-2 p-8 items-center w-min bg-white rounded-2xl '>
+          <div className='flex flex-col mx-2 py-8 px-12 items-center w-min bg-white rounded-2xl '>
             <div className='w-64 h-68'>
               <img
                 src="/me.jpg"
@@ -32,16 +36,28 @@ const App = () => {
             </div>
             <h1 className="text-5xl text-center font-bold my-6">Shreyansh <br></br>Agrawal</h1>
             <p className="text-[#6a6b6e] font-semibold text-center mt-8 mb-6">Passionate Software Engineer specializing in web development and innovative solutions.</p>
-            <div className="flex space-x-4">
-              <a href="https://github.com/agrawalshreyansh" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:text-text-secondary">GitHub</a>
-              <a href="https://linkedin.com/in/shreyanshagrawal" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:text-text-secondary">LinkedIn</a>
-              <a href="mailto:shreyansh@example.com" className="text-text-primary hover:text-text-secondary">Email</a>
+            <div className="flex items-center gap-6">
+              <a href="https://github.com/agrawalshreyansh" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:text-text-secondary" >
+                <img src='/github.svg' className='h-8 w-8'/>
+              </a>
+              <a href="https://leetcode.com/u/Shrage" className="text-text-primary hover:text-text-secondary flex items-center" target="_blank">
+                <img src='/leetcode.png' className='w-8'/>
+              </a>
+              <a href="https://linkedin.com/in/shreyanshagrawal" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:text-text-secondary">
+                <img src='/linkedin.svg' className='h-8 w-8'/>
+              </a>
+              <a href="mailto:i.shreyansh.agrawal@gmail.com" className="text-text-primary hover:text-text-secondary flex items-center" target="_blank">
+                <img src='/gmail.png' className='w-7'/>
+              </a>
+              <a href="https://www.youtube.com/@shreyansh_agrawal" className="text-text-primary hover:text-text-secondary flex items-center" target="_blank">
+                <img src='/youtube.png' className='w-12'/>
+              </a>
             </div>
           </div>
         </div>
         <div className="flex-2 mx-3">
           <section className="mb-8">
-            <h2 className="text-[108px] font-black text-white mb-2 leading-28">FULL STACK <br></br><span className='text-[#444444]'>ENGINEER</span></h2>
+            <h2 className="text-[108px] font-black text-white mb-2 leading-28">FULL STACK <br></br><span className='text-[#444444]'>DEVELOPER</span></h2>
             <p className="text-[#a4a6aa] text-lg mb-4 w-[62%]">Building scalable web applications and solving complex problems with modern technologies.Building scalable web applications and solving </p>
             <div className="flex space-x-8 my-16">
               <div className="text-center">
@@ -61,47 +77,70 @@ const App = () => {
 
           <section className="my-28">
             <h2 className="text-[84px] font-black text-white mb-2 leading-20">
-              RECENT 
+              RECENT
               <br></br>
               <span className='text-[#444444]'>PROJECTS</span>
-              </h2>
-            <div className="space-y-4">
-              <div className="bg-bg-secondary p-4 rounded">
-                <h4 className="text-xl font-semibold text-text-primary">Portfolio Website</h4>
-                <p className="text-text-secondary">A responsive portfolio built with React and Vite.</p>
-              </div>
-              <div className="bg-bg-secondary p-4 rounded">
-                <h4 className="text-xl font-semibold text-text-primary">E-commerce App</h4>
-                <p className="text-text-secondary">Full-stack application with Node.js and MongoDB.</p>
-              </div>
+            </h2>
+            <div>
+              {projects.map((item) => (
+                <Card
+                  key={item.src}
+                  img={item.src}
+                  title={item.title}
+                  description={item.description}
+                  timeline={item.timeline}
+                />
+              ))}
             </div>
           </section>
 
           <section className="my-28">
-            <h2 className="text-[84px] font-black text-white mb-2 leading-20">1 YEAR OF <br></br><span className='text-[#444444]'>EXPERIENCE
-</span></h2>
-            <div className="space-y-4">
-              <div className="bg-bg-secondary p-4 rounded">
-                <h4 className="text-xl font-semibold text-text-primary">Software Engineer at TechCorp</h4>
-                <p className="text-text-secondary">2022 - Present</p>
-                <p className="text-text-secondary">Developed and maintained web applications using React and Node.js.</p>
-              </div>
-              <div className="bg-bg-secondary p-4 rounded">
-                <h4 className="text-xl font-semibold text-text-primary">Junior Developer at StartupXYZ</h4>
-                <p className="text-text-secondary">2020 - 2022</p>
-                <p className="text-text-secondary">Worked on frontend development with JavaScript and CSS.</p>
-              </div>
+            <h2 className="text-[84px] font-black text-white mb-8 leading-20">1 YEAR OF <br></br><span className='text-[#444444]'>EXPERIENCE
+            </span></h2>
+            <div>
+              {experiences.map((item) => (
+                <Card
+                  key={item.title}
+                  img={item.img}
+                  title={item.title}
+                  description={item.description}
+                  timeline={item.timeline}
+                />
+              ))}
             </div>
           </section>
 
           <section className="my-28">
-            <h3 className="text-2xl font-bold text-text-primary mb-4">Let&apos;s Work Together</h3>
-            <p className="text-text-secondary mb-4">I&apos;m always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <h2 className="text-[84px] font-black text-white mb-8 leading-20">TECH<br></br><span className='text-[#444444]'>STACK
+            </span></h2>
+            <div className='grid grid-cols-2 w-[90%]'>
+              {techStack.map((tech) => (
+                <div key={tech.name} className="flex items-center text-2xl  text-white px-6 py-3 rounded-lg hover:bg-bg-secondary cursor-pointer transition-all duration-300">
+                  {tech.logo && <img src={tech.logo} alt={tech.name} className="w-16 h-16 mr-2 bg-white p-1 rounded-xl" />}
+                  {tech.name}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="my-28">
+            <h3 className="text-2xl font-bold text-text-primary mb-4"> </h3>
+            <h2 className="text-[84px] font-black text-white mb-8 leading-20">LET&apos;S WORK<br></br><span className='text-[#444444]'>TOGETHER
+            </span></h2>
             <form className="space-y-4">
-              <input type="text" placeholder="Your Name" className="w-full p-2 bg-bg-secondary text-text-primary rounded" />
-              <input type="email" placeholder="Your Email" className="w-full p-2 bg-bg-secondary text-text-primary rounded" />
-              <textarea placeholder="Your Message" className="w-full p-2 bg-bg-secondary text-text-primary rounded" rows="4"></textarea>
-              <button type="submit" className="bg-text-primary text-bg-primary px-4 py-2 rounded hover:bg-text-secondary">Send Message</button>
+              <div>
+                <label htmlFor="name" className="text-xs text-[#a4a6aa]">Name</label>
+                <input id="name" type="text" placeholder="Your Name" className="w-full p-2 bg-bg-secondary rounded-lg text-[#a4a6aa] border-1 border-transparent focus:border-text-primary focus:outline-none" />
+              </div>
+              <div>
+                <label htmlFor="email" className="text-xs text-[#a4a6aa]">Email</label>
+                <input id="email" type="email" placeholder="Your@email.com" className="w-full p-2 bg-bg-secondary rounded-lg text-[#a4a6aa] border-1 border-transparent focus:border-text-primary focus:outline-none" />
+              </div>
+              <div>
+                <label htmlFor="message" className="text-xs text-[#a4a6aa]">Message</label>
+                <textarea id="message" placeholder="Message" className="w-full p-2 bg-bg-secondary rounded-lg text-[#a4a6aa] border-1 border-transparent focus:border-text-primary focus:outline-none" rows="4"></textarea>
+              </div>
+              <button type="submit" className="bg-text-primary w-full text-bg-primary px-4 py-2  rounded-lg hover:bg-text-secondary">Send Message</button>
             </form>
           </section>
         </div>
