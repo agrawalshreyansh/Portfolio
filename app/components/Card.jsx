@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import { MoveUpRight } from 'lucide-react'
 
-const Card = ({ img, title, description, timeline }) => {
+const Card = ({ key, img, title, description, timeline, url }) => {
     return (
-        <div className='flex justify-between hover:bg-bg-secondary px-4 py-5 rounded-xl cursor-pointer transition-all duration-300 group'>
+        <div className='flex justify-between hover:bg-bg-secondary px-4 py-5 rounded-xl cursor-pointer transition-all duration-300 group' key={key} onClick={() => url && window.open(url, '_blank')}>
             <div>
             {img &&
                 <div>
@@ -27,6 +27,7 @@ Card.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     timeline: PropTypes.string,
+    url: PropTypes.string,
 }
 
 export default Card
